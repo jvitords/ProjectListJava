@@ -1,0 +1,24 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Integer> numeros = new ArrayList<>();
+		
+		numeros.add(3); // Adicionar item na lista
+		numeros.add(5);
+		numeros.add(4);
+		numeros.add(7);
+		numeros.add(2, 19); // Adicionar um número na posição indicada
+		numeros.remove(3);
+		
+		for (Integer num : numeros) {
+			System.out.println(num);
+		}
+	}
+
+}

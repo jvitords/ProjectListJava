@@ -1,0 +1,28 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<String> nomes = new ArrayList<>();
+		
+		nomes.add("Joao"); // Adicionar item na lista
+		nomes.add("Guilherme");
+		nomes.add("Alex");
+		nomes.add("Andre");
+		nomes.add(2, "ana"); // Adicionar um item na posição indicada
+		//nomes.remove(3); // remover item na posição indicada
+		nomes.removeIf(palavra -> palavra.charAt(0) == 'a'); // remove o item caso o primeiro número da lista for "A"
+		nomes.removeIf(nome -> nome == "Alex");  // remove o item que tiver valor igual a "Alex"
+		System.out.println("Index: " + nomes.indexOf("Guilherme")); // mostra a posição em que está o nome "Guilherme"
+		System.out.println(nomes.toString());
+		
+		for (String nome : nomes) {
+			System.out.println(nomes);
+		}
+	}
+
+}

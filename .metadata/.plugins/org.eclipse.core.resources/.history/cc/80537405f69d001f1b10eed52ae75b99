@@ -1,0 +1,36 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<String> nomes = new ArrayList<>();
+		
+		nomes.add("Joao"); // Adicionar item na lista
+		nomes.add("Guilherme");
+		nomes.add("Alex");
+		nomes.add("Andre");
+		nomes.add(2, "Ana"); // Adicionar um item na posição indicada
+		//nomes.remove(3); // remover item na posição indicada
+		//nomes.removeIf(palavra -> palavra.toLowerCase().charAt(0) == 'a'); // remove o item caso o primeira letra da lista for "A"
+		//nomes.removeIf(nome -> nome == "Alex");  // remove o item que tiver valor igual a "Alex"
+		System.out.println("Index do nome na posição: " + nomes.indexOf("Guilherme")); // mostra a posição em que está o nome "Guilherme"
+		
+		for (String nome : nomes) {
+			System.out.println(nome);
+		}
+		System.out.println("===============\n");
+		
+		List<String> listaComNomesIniciadosComA = nomes.stream().filter(primeiraLetra -> primeiraLetra.toLowerCase().charAt(0) == 'a').collect(Collectors.toList()); // filtrar nomes começados com a letra "A"
+		
+		
+		for (String n : listaComNomesIniciadosComA) {
+			System.out.println(n);
+		}
+	}
+}
